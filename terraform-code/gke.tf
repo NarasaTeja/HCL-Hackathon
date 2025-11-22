@@ -12,6 +12,8 @@ resource "google_container_cluster" "hackathon_cluster" {
     services_ipv4_cidr_block = "/20"
   }
 
+  service_account = google_service_account.service_account.id
+
   # Optional: Enable master authorized networks, logging, monitoring etc.
 }
 
